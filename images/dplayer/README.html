@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lcymblog.github.io/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lcymblog.github.io/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lcymblog.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/lcymblog.github.io/css/main.css?v=6.4.2" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/lcymblog.github.io/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/lcymblog.github.io/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/lcymblog.github.io/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/lcymblog.github.io/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/lcymblog.github.io/',
+    scheme: 'Pisces',
+    version: '6.4.2',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="DPlayer   🍭 Wow, such a lovely HTML5 danmaku video player   Introduction DPlayer is a lovely HTML5 danmaku video player to help people build video and danmaku easily. DPlayer supports:  Streaming fo">
+<meta name="keywords" content="凉城予梦,blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="凉城予梦的博客">
+<meta property="og:url" content="http://yoursite.com/images/dplayer/README.html">
+<meta property="og:site_name" content="凉城予梦的博客">
+<meta property="og:description" content="DPlayer   🍭 Wow, such a lovely HTML5 danmaku video player   Introduction DPlayer is a lovely HTML5 danmaku video player to help people build video and danmaku easily. DPlayer supports:  Streaming fo">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.imgur.com/LnPvZvO.png">
+<meta property="og:image" content="https://img.shields.io/npm/v/dplayer.svg?style=flat-square">
+<meta property="og:image" content="https://img.shields.io/npm/l/dplayer.svg?style=flat-square">
+<meta property="og:image" content="https://img.shields.io/npm/dt/dplayer.svg?style=flat-square">
+<meta property="og:image" content="https://badge-size.herokuapp.com/MoePlayer/DPlayer/master/dist/DPlayer.min.js?compression=gzip&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/travis/MoePlayer/DPlayer.svg?style=flat-square">
+<meta property="og:image" content="https://img.shields.io/david/dev/MoePlayer/dplayer.svg?style=flat-square">
+<meta property="og:image" content="http://i.imgur.com/207ch36.jpg">
+<meta property="og:image" content="https://i.imgur.com/5qQYmfc.png">
+<meta property="og:image" content="https://imgur.com/apG1uKf.png">
+<meta property="og:image" content="https://opencollective.com/DPlayer/contributors.svg?width=890">
+<meta property="og:updated_time" content="1985-10-26T08:15:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="凉城予梦的博客">
+<meta name="twitter:description" content="DPlayer   🍭 Wow, such a lovely HTML5 danmaku video player   Introduction DPlayer is a lovely HTML5 danmaku video player to help people build video and danmaku easily. DPlayer supports:  Streaming fo">
+<meta name="twitter:image" content="https://i.imgur.com/LnPvZvO.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/images/dplayer/README.html">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title> | 凉城予梦的博客</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+
+<!-- ##视频模块css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+<!-- ##结束 -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+<!-- ##视频模块js -->
+<script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+<!-- ##结束 -->
+
+  
+  
+    
+  
+
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/lcymblog.github.io/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">凉城予梦的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">心若向暖，生活必定是花开的模样</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/lcymblog.github.io/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/lcymblog.github.io/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/lcymblog.github.io/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/lcymblog.github.io/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline"></h1>
+
+<div class="post-meta">
+  
+  
+
+
+  
+  
+  <ul class="breadcrumb">
+    
+      
+      
+        
+          <li><a href="/lcymblog.github.io/images/">IMAGES</a></li>
+          
+            
+          
+        
+      
+    
+      
+      
+        
+          <li>DPLAYER</li>
+        
+      
+    
+      
+      
+        
+          <li><a href="/images/lcymblog.github.io/README.html/">README.HTML</a></li>
+          
+            
+          
+        
+      
+    
+  </ul>
+
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <p></p><p align="center"><br><img src="https://i.imgur.com/LnPvZvO.png" alt="ADPlayer" width="100"><br></p><p></p>
+<h1 align="center">DPlayer</h1>
+
+<blockquote>
+<p>🍭 Wow, such a lovely HTML5 danmaku video player</p>
+</blockquote>
+<p><a href="https://www.npmjs.com/package/dplayer" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/v/dplayer.svg?style=flat-square" alt="npm"></a><br><a href="https://github.com/MoePlayer/DPlayer/blob/master/LICENSE" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/l/dplayer.svg?style=flat-square" alt="npm"></a><br><a href="https://www.npmjs.com/package/dplayer" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/dt/dplayer.svg?style=flat-square" alt="npm"></a><br><a href="https://github.com/MoePlayer/DPlayer/tree/master/dist" target="_blank" rel="noopener"><img src="https://badge-size.herokuapp.com/MoePlayer/DPlayer/master/dist/DPlayer.min.js?compression=gzip&amp;style=flat-square" alt="size"></a><br><a href="https://travis-ci.org/MoePlayer/DPlayer" target="_blank" rel="noopener"><img src="https://img.shields.io/travis/MoePlayer/DPlayer.svg?style=flat-square" alt="Travis"></a><br><a href="https://david-dm.org/MoePlayer/DPlayer#info=devDependencies" target="_blank" rel="noopener"><img src="https://img.shields.io/david/dev/MoePlayer/dplayer.svg?style=flat-square" alt="devDependency Status"></a></p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><img src="http://i.imgur.com/207ch36.jpg" alt="image"></p>
+<p>DPlayer is a lovely HTML5 danmaku video player to help people build video and danmaku easily.</p>
+<p><strong>DPlayer supports:</strong></p>
+<ul>
+<li>Streaming formats<ul>
+<li><a href="https://github.com/video-dev/hls.js" target="_blank" rel="noopener">HLS</a></li>
+<li><a href="https://github.com/Bilibili/flv.js" target="_blank" rel="noopener">FLV</a></li>
+<li><a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="noopener">MPEG DASH</a></li>
+<li><a href="https://github.com/webtorrent/webtorrent" target="_blank" rel="noopener">WebTorrent</a></li>
+<li>Any other custom streaming formats</li>
+</ul>
+</li>
+<li>Media formats<ul>
+<li>MP4 H.264</li>
+<li>WebM</li>
+<li>Ogg Theora Vorbis</li>
+</ul>
+</li>
+<li>Features<ul>
+<li>Danmaku</li>
+<li>Screenshot</li>
+<li>Hotkeys</li>
+<li>Quality switching</li>
+<li>Thumbnails</li>
+<li>Subtitle</li>
+</ul>
+</li>
+</ul>
+<p>Using DPlayer on your project? <a href="https://github.com/DIYgod/DPlayer/issues/31" target="_blank" rel="noopener">Let me know!</a></p>
+<p><strong><a href="http://dplayer.js.org" target="_blank" rel="noopener">Docs</a></strong></p>
+<p><strong><a href="http://dplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener">中文文档</a></strong></p>
+<h2 id="Thanks"><a href="#Thanks" class="headerlink" title="Thanks"></a>Thanks</h2><h3 id="Sponsors"><a href="#Sponsors" class="headerlink" title="Sponsors"></a>Sponsors</h3><p><a href="https://pear.hk/" target="_blank"><br>    <img width="222px" src="https://i.imgur.com/5qQYmfc.png"><br></a><br><a href="https://console.upyun.com/register/?invite=BkLZ2Xqob" target="_blank"><br>    <img width="222px" src="https://imgur.com/apG1uKf.png"><br></a></p>
+<h3 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h3><p><a href="https://github.com/MoePlayer/DPlayer/graphs/contributors" target="_blank" rel="noopener"><img src="https://opencollective.com/DPlayer/contributors.svg?width=890"></a></p>
+<h2 id="Join-the-Discussion"><a href="#Join-the-Discussion" class="headerlink" title="Join the Discussion"></a>Join the Discussion</h2><ul>
+<li><a href="https://t.me/adplayer" target="_blank" rel="noopener">Telegram Group</a></li>
+</ul>
+<h2 id="Related-Projects"><a href="#Related-Projects" class="headerlink" title="Related Projects"></a>Related Projects</h2><p>Feel free to submit yours in <a href="https://github.com/MoePlayer/DPlayer/issues/31" target="_blank" rel="noopener"><code>Let me know!</code></a></p>
+<h3 id="Tooling"><a href="#Tooling" class="headerlink" title="Tooling"></a>Tooling</h3><ul>
+<li><a href="https://github.com/MoePlayer/DPlayer-thumbnails" target="_blank" rel="noopener">DPlayer-thumbnails</a>: generate video thumbnails</li>
+</ul>
+<h3 id="Danmaku-api"><a href="#Danmaku-api" class="headerlink" title="Danmaku api"></a>Danmaku api</h3><ul>
+<li><a href="https://github.com/MoePlayer/DPlayer-node" target="_blank" rel="noopener">DPlayer-node</a>: Node.js</li>
+<li><a href="https://github.com/MoePlayer/laravel-danmaku" target="_blank" rel="noopener">laravel-danmaku</a>: PHP</li>
+<li><a href="https://github.com/Izumi-kun/dplayer-live-backend" target="_blank" rel="noopener">dplayer-live-backend</a>: Node.js, WebSocket live backend</li>
+<li><a href="https://github.com/MoePlayer/RailsGun" target="_blank" rel="noopener">RailsGun</a>: Ruby</li>
+</ul>
+<h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><ul>
+<li><a href="https://github.com/volio/DPlayer-for-typecho" target="_blank" rel="noopener">DPlayer-for-typecho</a>: Typecho</li>
+<li><a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="noopener">Hexo-tag-dplayer</a>: Hexo</li>
+<li><a href="https://github.com/fghrsh/DPlayer_for_Z-BlogPHP" target="_blank" rel="noopener">DPlayer_for_Z-BlogPHP</a>: Z-BlogPHP</li>
+<li><a href="https://coding.net/u/Click_04/p/video/git" target="_blank" rel="noopener">DPlayer for Discuz!</a>: Discuz!</li>
+<li><a href="https://github.com/BlueCocoa/DPlayer-WordPress" target="_blank" rel="noopener">DPlayer for WordPress</a>: WordPress</li>
+<li><a href="https://github.com/kn007/DPlayerHandle" target="_blank" rel="noopener">DPlayerHandle</a>: WordPress</li>
+<li><a href="https://github.com/sinchang/vue-dplayer" target="_blank" rel="noopener">Vue-DPlayer</a>: Vue</li>
+<li><a href="https://github.com/hnsylitao/react-dplayer" target="_blank" rel="noopener">react-dplayer</a>: React</li>
+</ul>
+<h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><ul>
+<li><a href="https://github.com/kn007/DPlayer-Lite" target="_blank" rel="noopener">DPlayer-Lite</a>: lite version</li>
+<li><a href="https://github.com/cdnbye/hlsjs-p2p-engine" target="_blank" rel="noopener">hlsjs-p2p-engine</a></li>
+<li>Feel free to submit yours in <a href="https://github.com/MoePlayer/DPlayer/issues/31" target="_blank" rel="noopener"><code>Let me know!</code></a></li>
+</ul>
+<h2 id="Who-use-DPlayer"><a href="#Who-use-DPlayer" class="headerlink" title="Who use DPlayer?"></a>Who use DPlayer?</h2><ul>
+<li><a href="https://www.xiaohongshu.com/" target="_blank" rel="noopener">小红书</a>: 中国最大的生活社区分享平台，同时也是发现全球好物的电商平台</li>
+<li><a href="https://time.geekbang.org/" target="_blank" rel="noopener">极客时间</a>: 极客邦科技出品的一款 IT 内容知识服务 App</li>
+<li><a href="http://www.dilidili.wang/" target="_blank" rel="noopener">嘀哩嘀哩</a>: 兴趣使然的无名小站（D站）</li>
+<li><a href="https://www.sbsub.com/" target="_blank" rel="noopener">银色子弹</a>: 银色子弹，简称银弹，由多数柯南热爱者聚集在一起的组织</li>
+<li><a href="https://zh.wikipedia.org/wiki/CC98%E8%AE%BA%E5%9D%9B" target="_blank" rel="noopener">浙江大学CC98论坛</a>: 浙江大学校网内规模最大的论坛，中国各大学中较活跃的BBS之一</li>
+<li><a href="http://my.nuaa.edu.cn/video-video.html" target="_blank" rel="noopener">纸飞机南航青年网络社区</a>: 南京航空航天大学门户网站</li>
+<li><a href="https://otomads.com/" target="_blank" rel="noopener">otomads</a>: 专注于音MAD的视频弹幕网站</li>
+<li><a href="https://github.com/HFO4/Cloudreve" target="_blank" rel="noopener">Cloudreve</a>: 基于ThinkPHP构建的网盘系统</li>
+<li><a href="https://github.com/donwa/oneindex" target="_blank" rel="noopener">oneindex</a>: Onedrive Directory Index</li>
+<li>Feel free to submit yours in <a href="https://github.com/MoePlayer/DPlayer/issues/31" target="_blank" rel="noopener"><code>Let me know!</code></a></li>
+</ul>
+<h2 id="Donate"><a href="#Donate" class="headerlink" title="Donate"></a>Donate</h2><p>DPlayer is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.</p>
+<h2 id="One-time-Donations"><a href="#One-time-Donations" class="headerlink" title="One-time Donations"></a>One-time Donations</h2><p>We accept donations through these channels:</p>
+<ul>
+<li><a href="https://www.paypal.me/DIYgod" target="_blank" rel="noopener">Paypal</a></li>
+<li><a href="https://i.imgur.com/aq6PtWa.png" target="_blank" rel="noopener">WeChat Pay</a></li>
+<li><a href="https://i.imgur.com/wv1Pj2k.png" target="_blank" rel="noopener">Alipay</a></li>
+<li>Bitcoin: 13CwQLHzPYm2tewNMSJBeArbbRM5NSmCD1</li>
+</ul>
+<h2 id="Recurring-Pledges"><a href="#Recurring-Pledges" class="headerlink" title="Recurring Pledges"></a>Recurring Pledges</h2><p>Recurring pledges come with exclusive perks, e.g. enabling faster GitHub response, having your name or your company logo listed in the DPlayer GitHub repository and this website.</p>
+<ul>
+<li>Become a backer or sponsor via <a href="https://www.patreon.com/DIYgod" target="_blank" rel="noopener">Patreon</a></li>
+<li>E-mail us: i#html.love</li>
+</ul>
+<h2 id="Author"><a href="#Author" class="headerlink" title="Author"></a>Author</h2><p><strong>DPlayer</strong> © <a href="https://github.com/DIYgod" target="_blank" rel="noopener">DIYgod</a>, Released under the <a href="./LICENSE">MIT</a> License.<br><br>Authored and maintained by DIYgod with help from contributors (<a href="https://github.com/DIYgod/DPlayer/contributors" target="_blank" rel="noopener">list</a>).</p>
+<blockquote>
+<p><a href="https://diygod.me" target="_blank" rel="noopener">Blog</a> · GitHub <a href="https://github.com/DIYgod" target="_blank" rel="noopener">@DIYgod</a> · Twitter <a href="https://twitter.com/DIYgod" target="_blank" rel="noopener">@DIYgod</a> · Telegram Channel <a href="https://t.me/awesomeDIYgod" target="_blank" rel="noopener">@awesomeDIYgod</a></p>
+</blockquote>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+
+  
+  
+  <ul class="breadcrumb">
+    
+      
+      
+        
+          <li><a href="/lcymblog.github.io/images/">IMAGES</a></li>
+          
+            
+          
+        
+      
+    
+      
+      
+        
+          <li>DPLAYER</li>
+        
+      
+    
+      
+      
+        
+          <li><a href="/images/lcymblog.github.io/README.html/">README.HTML</a></li>
+          
+            
+          
+        
+      
+    
+  </ul>
+
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://img04.sogoucdn.com/app/a/100520146/2c637f3a7cd3532c876fb5acffd192a6" alt="凉城予梦">
+            
+              <p class="site-author-name" itemprop="name">凉城予梦</p>
+              <p class="site-description motion-element" itemprop="description">HI,这里是专属于凉城予梦的博客小屋 | 或许前路永夜，即便如此我也要前进，因为星光即使微弱也会为我照亮前路。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/lcymblog.github.io/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:2803910160@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:2803910160@qq.com" target="_blank" title="QQ"><i class="fa fa-fw fa-qq"></i>QQ</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">DPlayer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thanks"><span class="nav-number">1.2.</span> <span class="nav-text">Thanks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sponsors"><span class="nav-number">1.2.1.</span> <span class="nav-text">Sponsors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Contributors"><span class="nav-number">1.2.2.</span> <span class="nav-text">Contributors</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Join-the-Discussion"><span class="nav-number">1.3.</span> <span class="nav-text">Join the Discussion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Related-Projects"><span class="nav-number">1.4.</span> <span class="nav-text">Related Projects</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tooling"><span class="nav-number">1.4.1.</span> <span class="nav-text">Tooling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Danmaku-api"><span class="nav-number">1.4.2.</span> <span class="nav-text">Danmaku api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Plugins"><span class="nav-number">1.4.3.</span> <span class="nav-text">Plugins</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other"><span class="nav-number">1.4.4.</span> <span class="nav-text">Other</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Who-use-DPlayer"><span class="nav-number">1.5.</span> <span class="nav-text">Who use DPlayer?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Donate"><span class="nav-number">1.6.</span> <span class="nav-text">Donate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-time-Donations"><span class="nav-number">1.7.</span> <span class="nav-text">One-time Donations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recurring-Pledges"><span class="nav-number">1.8.</span> <span class="nav-text">Recurring Pledges</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Author"><span class="nav-number">1.9.</span> <span class="nav-text">Author</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">凉城予梦</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+<span id="runtime_span"></span><script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=new Date("10/31/2018 23:00:00");Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);runtime_span.innerHTML="本站已经萌萌哒运行了："+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script>
+
+<div>--- 只要步履不停，我们总会相遇 ---</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+
+<div style="display:none">
+<script src="https://s5.cnzz.com/z_stat.php?id=1275247132&web_id=1275247132" language="JavaScript"></script>
+</div> 
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lcymblog.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lcymblog.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lcymblog.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lcymblog.github.io/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="/lcymblog.github.io/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/lcymblog.github.io/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/lcymblog.github.io/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/lcymblog.github.io/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/lcymblog.github.io/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/lcymblog.github.io/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/lcymblog.github.io/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/lcymblog.github.io/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://凉城予梦.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/images/dplayer/README.html';
+        this.page.identifier = 'images/dplayer/README.html';
+        this.page.title = '';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://凉城予梦.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
